@@ -18,9 +18,17 @@ print(files)
 with open("thekey.key", "rb") as key:
         secretkey = key.read()
         
-for file in files:
-        with open(file, "rb") as thefile:
-                contents = thefile.read()
-        contents_decrypted = Fernet(secretkey).decrypt(contents)
-        with open(file "wb") as thefile:
-                thefile.write(contents decrypted)
+passphrase = "coffee"
+
+user_phrase = input("enter the passphrase to decrypt files\n")
+
+if user_phrase == secretphrase:
+	print("decryption innitiated")
+	for file in files:
+        	with open(file, "rb") as thefile:
+                	contents = thefile.read()
+	        contents_decrypted = Fernet(secretkey).decrypt(contents)
+        	with open(file "wb") as thefile:
+                	thefile.write(contents decrypted)
+else:
+	print("wrong passphrase")
