@@ -22,13 +22,13 @@ passphrase = "coffee"
 
 user_phrase = input("enter the passphrase to decrypt files\n")
 
-if user_phrase == secretphrase:
+if user_phrase == passphrase:
 	print("decryption innitiated")
 	for file in files:
         	with open(file, "rb") as thefile:
                 	contents = thefile.read()
 	        contents_decrypted = Fernet(secretkey).decrypt(contents)
-        	with open(file "wb") as thefile:
-                	thefile.write(contents decrypted)
+        	with open(file, "wb") as thefile:
+                	thefile.write(contents_decrypted)
 else:
 	print("wrong passphrase")
