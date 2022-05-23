@@ -1,3 +1,3 @@
-# ransomware
+Encrypter
 
-ransomware is just a bare boned ransome ware program to decrypt files, then at the entering of the correct password decrypt them
+Encrypter is an opensource encryption tool to lock your files when you are away, and adds an extra layer of protection to your projects.
